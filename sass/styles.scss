@@ -18,6 +18,7 @@ body {
 
 .main-container {
   position: relative;
+  display: flex;
   overflow: hidden;
 }
 
@@ -69,7 +70,7 @@ body {
   position: relative;
   min-width: 100vw;
   min-height: 100vh;
-
+  transition: transform 1s;
   &--1 {
     .titles {
       position: relative;
