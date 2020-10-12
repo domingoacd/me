@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "node-sass ./sass/styles.scss ./css/styles.css --watch --source-map=true"
+    "start": "nodemon app.js",
+    "sass": "node-sass ./src/sass/styles.scss ./public/css/styles.css --watch --source-map=true"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   "homepage": "https://github.com/domingoacd/me#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "node-sass": "^4.14.1"
+    "node-sass": "^4.14.1",
+    "nodemon": "^2.0.4"
   }
 }
