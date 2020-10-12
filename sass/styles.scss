@@ -70,7 +70,7 @@ body {
   position: relative;
   min-width: 100vw;
   min-height: 100vh;
-  transition: transform 1s;
+  transition: transform 2s;
   &--1 {
     .titles {
       position: relative;
@@ -101,6 +101,72 @@ body {
       bottom: 0;
       right: -7rem;
       width: 43rem;
+    }
+  }
+
+  &--2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .soil {
+    height: 5.06rem;
+    width: 100.1%;
+    left: -0.1%;
+    }
+
+    .about-text {
+      position: relative;
+      bottom: 10%;
+      left: 10%;
+      width: 24rem;
+      font-size: 1.3rem;
+    }
+
+    .plants {
+      position: absolute;
+      bottom: 3rem;
+
+      &--1 {
+        left: 10rem;
+      }
+
+      &--2 {
+        right: 10rem;
+      }
+    }
+  }
+
+  &--3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .soil {
+      left: -0.1rem;
+      width: 100.1%;
+      height: 7.4rem;
+    }
+
+    .projects {
+      width: 40rem;
+      display: flex;
+      flex-wrap: wrap;
+      
+      .project {
+        width: 15rem;
+        height: 12rem;
+        margin: 2rem;
+        overflow: hidden;
+      }
+    }
+  }
+
+  &--4 {
+
+    .soil {
+      left: -0.1rem;
+      width : 100.1%;
+      height: 5.8rem;
     }
   }
 }

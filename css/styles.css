@@ -57,7 +57,7 @@ body {
   position: relative;
   min-width: 100vw;
   min-height: 100vh;
-  transition: transform 1s; }
+  transition: transform 2s; }
   .screen--1 .titles {
     position: relative;
     top: 1rem;
@@ -79,6 +79,48 @@ body {
     bottom: 0;
     right: -7rem;
     width: 43rem; }
+  .screen--2 {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .screen--2 .soil {
+      height: 5.06rem;
+      width: 100.1%;
+      left: -0.1%; }
+    .screen--2 .about-text {
+      position: relative;
+      bottom: 10%;
+      left: 10%;
+      width: 24rem;
+      font-size: 1.3rem; }
+    .screen--2 .plants {
+      position: absolute;
+      bottom: 3rem; }
+      .screen--2 .plants--1 {
+        left: 10rem; }
+      .screen--2 .plants--2 {
+        right: 10rem; }
+  .screen--3 {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .screen--3 .soil {
+      left: -0.1rem;
+      width: 100.1%;
+      height: 7.4rem; }
+    .screen--3 .projects {
+      width: 40rem;
+      display: flex;
+      flex-wrap: wrap; }
+      .screen--3 .projects .project {
+        width: 15rem;
+        height: 12rem;
+        margin: 2rem;
+        overflow: hidden; }
+  .screen--4 .soil {
+    left: -0.1rem;
+    width: 100.1%;
+    height: 5.8rem; }
 
 .soil {
   position: absolute;
