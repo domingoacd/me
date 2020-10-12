@@ -19,7 +19,7 @@
   } 
       
 
-  function changeUrl(urlId) {
+  function changeUrl(urlId, urlName) {
     console.log(history);
     history.pushState(
       {
@@ -27,7 +27,7 @@
     
       },
       'Domingo ' + urlId,
-      '/test'+ urlId
+      '/'+ urlName
     );
   }
 
@@ -36,9 +36,10 @@
     
     
     const clickedLinkNumber = Number(this.dataset.link);
+    const urlName = this.dataset.url;
 
     if (clickedLinkNumber !== currentView) {
-      changeUrl(clickedLinkNumber);
+      changeUrl(clickedLinkNumber, urlName);
     }
       while (clickedLinkNumber !== currentView) {
         clickedLinkNumber > currentView
@@ -49,6 +50,13 @@
 
   }
 
+  function handleInitialRoute(e) {
+    const route = window.location.pathname;
+
+    console.log(route);
+  }
+
   navLinks.forEach(link => link.addEventListener('click', changeScreen));
   window.onpopstate = (e) => console.log('pop');
+  window.addEventListener('load', handleInitialRoute);
 }())
