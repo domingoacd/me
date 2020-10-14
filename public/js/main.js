@@ -1,7 +1,12 @@
 (function() {
   const navLinks = document.querySelectorAll('.j-nav-element');
   const allViews = document.querySelectorAll('.j-screen');
-  
+  const ROUTES = [
+    "home",
+    "aboutme",
+    "projects",
+    "contact"
+  ];
   let currentView = 0;
   let currentTranslation = 0;
 
@@ -20,7 +25,6 @@
       
 
   function changeUrl(urlId, urlName) {
-    console.log(history);
     history.pushState(
       {
         currentPageId: urlId
@@ -50,13 +54,28 @@
 
   }
 
-  function handleInitialRoute(e) {
-    const route = window.location.pathname;
+  function showSpecificScreen(screenToShow) {
 
-    console.log(route);
+    for (let i = 0; i < navLinks.length; i++) {
+      const viewId = navLinks[i].dataset.url;
+      if (viewId != screenToShow) {
+        translateScreensForwards();
+      } else {
+        break;
+      }
+    }
+  }
+
+  function goToSpecificRoute(e) {
+    const route = window.location.pathname.split('/')[1];
+    console.log('pop')
+    if (ROUTES.some(baseRoute => baseRoute == route)) {
+      showSpecificScreen(route);
+
+    }
   }
 
   navLinks.forEach(link => link.addEventListener('click', changeScreen));
-  window.onpopstate = (e) => console.log('pop');
-  window.addEventListener('load', handleInitialRoute);
+  window.addEventListener('popstate', goToSpecificRoute);
+  window.addEventListener('load', goToSpecificRoute);
 }())

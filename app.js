@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const path = require("path");
 
-const PORT = '8000';
+const PORT = '3000';
 const URLS = [
   'home',
   'aboutme',
