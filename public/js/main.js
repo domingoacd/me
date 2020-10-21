@@ -71,7 +71,6 @@
     console.log('pop')
     if (ROUTES.some(baseRoute => baseRoute == route)) {
       showSpecificScreen(route);
-
     }
   }
 
