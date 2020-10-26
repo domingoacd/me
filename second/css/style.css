@@ -75,7 +75,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem 1rem; }
+    padding: 2rem 1rem;
+    opacity: 0;
+    transition: opacity 0.2s ease-out; }
+    .container .content.show {
+      opacity: 1; }
     .container .content--first {
       justify-content: center; }
       .container .content--first .cover {
@@ -306,6 +310,10 @@ body {
   .container {
     margin-left: 4rem; }
     .container .content__title {
-      font-size: 2rem; } }
+      font-size: 2rem; }
+    .container .content--first .second-menu ul li {
+      font-size: 1rem; }
+    .container .content--second .summary {
+      font-size: 1.2rem; } }
 
 /*# sourceMappingURL=style.css.map */

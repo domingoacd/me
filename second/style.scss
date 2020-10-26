@@ -107,6 +107,11 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 2rem 1rem;
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+    &.show {
+      opacity: 1;
+    }
     &--first {
       justify-content: center;
       .cover {
@@ -469,6 +474,22 @@ body {
     .content {
       &__title {
         font-size: 2rem;
+      }
+
+      &--first {
+        .second-menu {
+          ul {
+            li {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+
+      &--second {
+        .summary {
+          font-size: 1.2rem;
+        }
       }
     }
   }

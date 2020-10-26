@@ -1,10 +1,10 @@
 (function() {
-  const menuLinks = document.querySelectorAll('.j-anchor');
-  const contentSections = document.querySelectorAll('.j-content');
+  const menuLinks = Array.from(document.querySelectorAll('.j-anchor'));
+  const contentSections = Array.from(document.querySelectorAll('.j-content'));
   const mainMenu = document.getElementById('main-menu');
 
-  let sectionsTopPosition = null;
-  
+
+
   function changeView(e) {
 
     const clickedAnchor = this;
@@ -34,11 +34,39 @@
     }
     
   }
-  function setSectionsTopPosition() {
-    // contentSections
+
+  const removeActiveClassFromAnchor = (anchor) => anchor.classList.remove('active');
+
+  function detectCurrentSection() {
+    
+    contentSections.reverse().forEach(section => {
+      
+      if (
+        section.id != 'home' &
+        section.getBoundingClientRect().top >= 0 &&
+        section.getBoundingClientRect().top < window.innerHeight - 300
+      ) {
+        
+        section.classList.add('show');
+        menuLinks.forEach(removeActiveClassFromAnchor);
+        menuLinks.find(link => link.dataset.link == section.id).classList.add('active');
+      }
+    });
+    
+  }
+  
+  const pageIsScrolledAlready = () => window.pageYOffset > 150;
+
+  function showSections(e) {
+    contentSections[0].classList.add('show');
+    if(pageIsScrolledAlready()) {
+      contentSections.forEach(section => section.classList.add('show'));
+    }
+    
   }
 
-  setSectionsTopPosition();
   menuLinks.forEach(link => link.addEventListener('click', changeView));
   window.addEventListener('scroll', toggleMainMenu);
+  window.addEventListener('scroll', detectCurrentSection);
+  window.addEventListener('load', showSections);
 })();
