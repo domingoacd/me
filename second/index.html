@@ -10,15 +10,15 @@
 </head>
 <body>
   <nav class="main-menu">
-    <ul class="main-menu__menu">
-      <li>
-        <a href="">About</a>
+    <ul class="main-menu__menu" id="main-menu">
+      <li class="j-anchor" data-link="about">
+        <a  href="#about">About</a>
       </li>
-      <li>
-        <a href="">Projects</a>
+      <li class="j-anchor" data-link="projects">
+        <a href="#projects">Projects</a>
       </li>
-      <li>
-        <a href="">Contact</a>
+      <li class="j-anchor" data-link="contact">
+        <a href="#contact">Contact</a>
       </li>
     </ul>
 
@@ -36,7 +36,7 @@
     </ul>
   </nav>
   <div class="container">
-    <section class="content content--first">
+    <section class="content content--first j-content" id="home">
       <div class="cover">
         <img src="./assets/foto.png" alt="" class="cover__pic">
 
@@ -47,14 +47,14 @@
       </div>
       <nav class="second-menu">
         <ul>
-          <li><a href="#">About me</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Contact</a></li>
+          <li class="j-anchor" data-link="about"><a  href="#about">About me</a></li>
+          <li class="j-anchor" data-link="projects"><a href="#projects">Projects</a></li>
+          <li class="j-anchor" data-link="contact"><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </section>
 
-    <section class="content content--second">
+    <section class="content content--second j-content"  id="about">
       <h2 class="content__title">
         About me
       </h2>
@@ -67,7 +67,7 @@
       </div>
     </section>
 
-    <section class="content content--third">
+    <section class="content content--third j-content"  id="projects">
       <h2 class="content__title">
         My works
       </h2>
@@ -126,7 +126,8 @@
         </div>
       </div>
     </section>
-    <section class="content content--fourth">
+
+    <section class="content content--fourth j-content"  id="contact">
       <h2 class="content__title">Want to tell me something?</h2>
       <form action="" class="contact-form">
         <label for="" class="contact-form__name">

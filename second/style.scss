@@ -12,6 +12,9 @@ $fourth-color: #D58936;
 
 $menu-width: 8rem;
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   display: flex;
 }
@@ -24,6 +27,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 2rem 0;
+  overflow: hidden;
   background-color: $primary-color;
   box-shadow: 0px 10px 10px rgba(0,0,0,0.7); 
 
@@ -32,7 +36,16 @@ body {
     top: 6rem;
     height: $menu-width;
     display: flex;
+    flex-direction: row-reverse;
     transform: rotate(-90deg);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    &.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
     li {
       display: flex;
       align-items: center; 
@@ -40,14 +53,25 @@ body {
       margin-right: 3rem;
       font-size: 1.3rem;
       color: $secondary-color;
+      transition: color 0.2s;
 
-      &:nth-last-child(1) {
+      &:nth-child(1) {
         margin-right: 0;
       }
+
+      &:hover {
+        color: $fourth-color;
+      }
+
+      &.active {
+        color: $fourth-color;
+      }
+
       a {
         color: inherit;
         text-decoration: none;  
       }
+      
     }
   }
   &__icons {
@@ -67,6 +91,7 @@ body {
       }
     }
   }
+
 }
 
 .container {
@@ -86,12 +111,15 @@ body {
       justify-content: center;
       .cover {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
+        justify-content: center;
+        gap: 1rem;
         &__pic {
           width: 15rem;
           height: 15rem;
           border-radius: 50%;
-          margin-right: 3rem;
+          
         }
 
         h1 {
@@ -397,6 +425,51 @@ body {
       font-weight: 300;
       text-align: center;
       color: $third-color;
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .container {
+    .content {
+      &--first {
+        .cover {
+          &__pic {
+            width: 13rem;
+            height: 13rem;
+          }
+          &__titles {
+            text-align: center;
+
+            h1 {
+              font-size: 3rem;
+            }
+
+            h3 {
+              font-size: 1.8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 590px) {
+  $menu-width: 4rem;
+
+  .main-menu {
+    width: $menu-width;
+  }
+
+  .container {
+    margin-left: $menu-width;
+
+    .content {
+      &__title {
+        font-size: 2rem;
+      }
     }
   }
 }

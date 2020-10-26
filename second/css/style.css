@@ -4,6 +4,9 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif; }
 
+html {
+  scroll-behavior: smooth; }
+
 body {
   display: flex; }
 
@@ -16,6 +19,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 2rem 0;
+  overflow: hidden;
   background-color: #001011;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.7); }
   .main-menu__menu {
@@ -23,16 +27,28 @@ body {
     top: 6rem;
     height: 8rem;
     display: flex;
-    transform: rotate(-90deg); }
+    flex-direction: row-reverse;
+    transform: rotate(-90deg);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease; }
+    .main-menu__menu.show {
+      opacity: 1;
+      visibility: visible; }
     .main-menu__menu li {
       display: flex;
       align-items: center;
       list-style: none;
       margin-right: 3rem;
       font-size: 1.3rem;
-      color: #fff; }
-      .main-menu__menu li:nth-last-child(1) {
+      color: #fff;
+      transition: color 0.2s; }
+      .main-menu__menu li:nth-child(1) {
         margin-right: 0; }
+      .main-menu__menu li:hover {
+        color: #D58936; }
+      .main-menu__menu li.active {
+        color: #D58936; }
       .main-menu__menu li a {
         color: inherit;
         text-decoration: none; }
@@ -64,12 +80,14 @@ body {
       justify-content: center; }
       .container .content--first .cover {
         display: flex;
-        align-items: center; }
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem; }
         .container .content--first .cover__pic {
           width: 15rem;
           height: 15rem;
-          border-radius: 50%;
-          margin-right: 3rem; }
+          border-radius: 50%; }
         .container .content--first .cover h1 {
           font-size: 4rem;
           font-weight: 500;
@@ -270,5 +288,24 @@ body {
       font-weight: 300;
       text-align: center;
       color: #F2F3AE; }
+
+@media screen and (max-width: 720px) {
+  .container .content--first .cover__pic {
+    width: 13rem;
+    height: 13rem; }
+  .container .content--first .cover__titles {
+    text-align: center; }
+    .container .content--first .cover__titles h1 {
+      font-size: 3rem; }
+    .container .content--first .cover__titles h3 {
+      font-size: 1.8rem; } }
+
+@media screen and (max-width: 590px) {
+  .main-menu {
+    width: 4rem; }
+  .container {
+    margin-left: 4rem; }
+    .container .content__title {
+      font-size: 2rem; } }
 
 /*# sourceMappingURL=style.css.map */
