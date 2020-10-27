@@ -75,4 +75,26 @@
     }
   }
 
+  &--project {
+    .main-menu__menu {
+      top: 0;
+      width: 100%;
+      justify-content: center;
+      transform: unset;
+      li {
+         width: 90%;
+         min-width: 4rem;
+         text-align: center;
+         font-size: 1rem;
+        img {
+          display: block;
+          width: 40%;
+          height: auto;
+          margin: 0 auto;
+          margin-bottom: 0.5rem;
+          filter: invert(1);
+        }
+      }
+    }
+  }
 }

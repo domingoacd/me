@@ -18,4 +18,10 @@ html {
 
 body {
   display: flex;
+  background-color: $primary-color;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Project | React Pokedex</title>
+</head>
+<body>
+  <nav class="main-menu main-menu--project">
+    <ul class="main-menu__menu show" id="main-menu">
+      <li class="j-anchor" >
+        <a href="./index.html">
+          <img src="./assets/home.png" alt="">
+          Go back
+        </a>
+      </li>
+    </ul>
+
+    <ul class="main-menu__icons">
+      <li>
+        <a href="#">
+          <img src="./assets/linkedin.png" alt="">
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="./assets/github.png" alt="">
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <section class="container"> 
+    <div class="content page page--pokedex j-page">
+      <div class="project-identification">
+        <div class="project-identification__image"></div>
+        <div class="project-identification__info">
+          <h1>
+            <span class="small-text">
+              <img src="./assets/pokeball.png" alt="">
+              React
+            </span>
+            Pokedex
+          </h1>
+          <a href="" class="project-link project-link--one">Source code</a>
+          <a href="" class="project-link project-link--two">Live website</a>
+        </div>
+      </div>
+      <div class="project-summary">
+        <h2>Summary</h2>
+        <p>
+          Amet incididunt cillum ipsum magna eiusmod esse id do ad anim veniam. Incididunt ipsum tempor amet ex esse eu. Laboris aute adipisicing consectetur reprehenderit anim exercitation voluptate id exercitation qui cupidatat. Mollit pariatur elit adipisicing ut proident eiusmod ut proident qui cupidatat ipsum tempor occaecat. Minim occaecat nostrud dolore irure ipsum occaecat do. Culpa irure sunt dolore nulla mollit adipisicing aliqua magna aliqua ut reprehenderit deserunt. Sint et sint officia esse quis ex aliquip non nulla exercitation duis veniam.
+        </p>
+      </div>
+      <div class="project-technologies">
+        <h2>Technologies used</h2>
+        <ul>
+          <li>React JS</li>
+          <li>Styled Components</li>
+          <li>API Fetching</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function showPageContent(e) {
+      const content = document.querySelector('.j-page');
+
+      content.classList.add('show');
+    }
+    window.addEventListener('load', showPageContent);
+  </script>
+</body>
+</html>
