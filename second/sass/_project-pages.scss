@@ -14,8 +14,6 @@
       height: 15rem;
       border-radius: 50%;
       overflow: hidden;
-      background-image: url('../assets/pokedex-back.png');
-      background-position: 31% 29%;
 
       &::before {
         content: "";
@@ -24,7 +22,34 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(167, 0, 0, 0.5);
+      }
+
+      &.pokemon-image {
+        background-image: url('../assets/pokedex-back.png');
+        background-position: 31% 29%;
+
+        /*&::before {
+          background-color: rgba(167, 0, 0, 0.5);
+        }*/
+      }
+      &.charger-image {
+        background-image: url('../assets/charger.jpg');
+        background-position: 0% 5%;
+        background-size: cover;
+
+        /*&::before {
+          background-color: rgba(88, 88, 88, 0.1);
+        }*/
+      }
+      &.smart-image {
+        background-image: url('../assets/smart.png');
+        background-position: 84% 5%;
+        background-size: cover;
+      }
+      &.academia-image {
+        background-image: url('../assets/academia.png');
+        background-position: 98%;
+        background-size: cover;
       }
     }
 

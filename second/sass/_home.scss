@@ -149,11 +149,12 @@
           &--2 {
             line-height: 1.2;
             .bck-container { 
-              background-image: url('../assets/charger.png');
+              background-image: url('../assets/charger.jpg');
+              background-size: cover;
             }
 
             &::before {
-              background-color: rgba(32, 25, 18, 0.9);
+              background-color: rgba(32, 25, 18, 0.8);
             }
 
             .small-text  {
@@ -366,6 +367,11 @@
 
   .main-menu {
     width: $menu-width;
+
+    &__menu {
+      top: 7rem;
+      height: $menu-width;
+    }
   }
 
   .container {

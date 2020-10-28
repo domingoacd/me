@@ -35,13 +35,9 @@
       font-size: 1.3rem;
       color: $secondary-color;
       transition: color 0.2s;
-
+      
       &:nth-child(1) {
         margin-right: 0;
-      }
-
-      &:hover {
-        color: $fourth-color;
       }
 
       &.active {
@@ -52,6 +48,11 @@
       a {
         color: inherit;
         text-decoration: none;
+        transition: color 0.2s;
+
+        &:hover {
+          color: $fourth-color;
+        }
       }
 
     }

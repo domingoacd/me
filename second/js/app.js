@@ -65,7 +65,7 @@
     
   }
 
-  menuLinks.forEach(link => link.addEventListener('click', changeView));
+  //menuLinks.forEach(link => link.addEventListener('click', changeView));
   window.addEventListener('scroll', toggleMainMenu);
   window.addEventListener('scroll', detectCurrentSection);
   window.addEventListener('load', showSections);
