@@ -46,6 +46,7 @@
 
       &.active {
         color: $fourth-color;
+        box-shadow: inset 0px 5px 0px $fourth-color;
       }
 
       a {
