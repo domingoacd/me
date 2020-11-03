@@ -19,7 +19,7 @@ a {
 .main-menu {
   position: fixed;
   width: 8rem;
-  min-height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
