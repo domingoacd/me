@@ -28,28 +28,35 @@
         background-image: url('../assets/pokedex-back.png');
         background-position: 31% 29%;
 
-        /*&::before {
-          background-color: rgba(167, 0, 0, 0.5);
-        }*/
+        &::before {
+          background-color: rgba(167, 0, 0, 0.3);
+        }
       }
       &.charger-image {
         background-image: url('../assets/charger.jpg');
         background-position: 0% 5%;
         background-size: cover;
 
-        /*&::before {
-          background-color: rgba(88, 88, 88, 0.1);
-        }*/
+        &::before {
+          background-color: rgba(32, 25, 18, 0.3);
+        }
       }
       &.smart-image {
         background-image: url('../assets/smart.png');
         background-position: 84% 5%;
         background-size: cover;
+        &::before {
+          background-color: rgba(0, 85, 140, 0.3);
+        }
       }
       &.academia-image {
         background-image: url('../assets/academia.png');
         background-position: 98%;
         background-size: cover;
+        &::before {
+          background: rgba(131, 56, 236, 0.3);
+          background: linear-gradient(270deg, rgba(131, 56, 236, 0.3) 0%, rgba(233, 72, 174, 0.3) 100%, rgba(233, 72, 174, 0.3) 100%, rgba(233, 72, 174, 0.3) 100%);
+        }
       }
     }
 

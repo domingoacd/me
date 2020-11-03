@@ -77,6 +77,10 @@
         line-height: 2;
         margin-top: 3rem;
         color: $secondary-color;
+        ul {
+          padding: 2rem 1.5rem;
+          ;
+        }
       }      
     }
 
@@ -458,7 +462,7 @@
   &.display {
     top: 2%;
   }
-  
+
   &__content {
     color: $primary-color;
     display: none;

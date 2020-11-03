@@ -113,25 +113,28 @@ a {
         height: 100%; }
       .page .project-identification__image.pokemon-image {
         background-image: url("../assets/pokedex-back.png");
-        background-position: 31% 29%;
-        /*&::before {
-          background-color: rgba(167, 0, 0, 0.5);
-        }*/ }
+        background-position: 31% 29%; }
+        .page .project-identification__image.pokemon-image::before {
+          background-color: rgba(167, 0, 0, 0.3); }
       .page .project-identification__image.charger-image {
         background-image: url("../assets/charger.jpg");
         background-position: 0% 5%;
-        background-size: cover;
-        /*&::before {
-          background-color: rgba(88, 88, 88, 0.1);
-        }*/ }
+        background-size: cover; }
+        .page .project-identification__image.charger-image::before {
+          background-color: rgba(32, 25, 18, 0.3); }
       .page .project-identification__image.smart-image {
         background-image: url("../assets/smart.png");
         background-position: 84% 5%;
         background-size: cover; }
+        .page .project-identification__image.smart-image::before {
+          background-color: rgba(0, 85, 140, 0.3); }
       .page .project-identification__image.academia-image {
         background-image: url("../assets/academia.png");
         background-position: 98%;
         background-size: cover; }
+        .page .project-identification__image.academia-image::before {
+          background: rgba(131, 56, 236, 0.3);
+          background: linear-gradient(270deg, rgba(131, 56, 236, 0.3) 0%, rgba(233, 72, 174, 0.3) 100%, rgba(233, 72, 174, 0.3) 100%, rgba(233, 72, 174, 0.3) 100%); }
     .page .project-identification__info {
       color: #fff; }
       .page .project-identification__info h1 {
@@ -238,6 +241,8 @@ a {
       line-height: 2;
       margin-top: 3rem;
       color: #fff; }
+      .container .content--second .summary ul {
+        padding: 2rem 1.5rem; }
     .container .content--third .projects {
       width: 100%;
       max-width: 50rem;
