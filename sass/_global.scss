@@ -14,12 +14,14 @@ $menu-width: 8rem;
 
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 body {
   display: flex;
   background-color: $primary-color;
   overflow-x: hidden;
+  height: 100%;
 }
 
 a {
