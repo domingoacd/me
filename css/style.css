@@ -9,7 +9,8 @@ html {
 
 body {
   display: flex;
-  background-color: #001011; }
+  background-color: #001011;
+  overflow-x: hidden; }
 
 a {
   text-decoration: none;
@@ -191,7 +192,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem 1rem;
+    padding: 2rem 3%;
     opacity: 0;
     transition: opacity 0.2s ease-out; }
     .container .content.show {
@@ -462,7 +463,7 @@ a {
     .container .content--first .second-menu ul li {
       font-size: 1rem; }
     .container .content--second .summary {
-      font-size: 1.2rem; } }
+      font-size: 1rem; } }
 
 .modal {
   position: fixed;

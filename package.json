@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass ./second/sass/index.scss ./second/css/style.css --watch --source-map=true"
+    "sass": "node-sass ./sass/index.scss ./css/style.css --watch --source-map=true"
   },
   "repository": {
     "type": "git",
