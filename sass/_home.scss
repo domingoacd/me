@@ -413,6 +413,10 @@
     &__menu {
       top: 7rem;
       height: $menu-width;
+
+      li {
+        font-size: 1rem;
+      }
     }
   }
 

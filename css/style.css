@@ -456,6 +456,8 @@ a {
     .main-menu__menu {
       top: 7rem;
       height: 4rem; }
+      .main-menu__menu li {
+        font-size: 1rem; }
   .container {
     margin-left: 4rem; }
     .container .content__title {
