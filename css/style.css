@@ -181,6 +181,12 @@ a {
     .page .project-summary ul, .page .project-technologies ul {
       padding-left: 1.4rem; }
 
+@media screen and (max-width: 590px) {
+  .page .project-identification__info h1 {
+    font-size: 3rem; }
+    .page .project-identification__info h1 span {
+      font-size: 2rem; } }
+
 .container {
   flex: 1;
   margin-left: 8rem;
@@ -450,23 +456,6 @@ a {
     .container .content--first .cover__titles h3 {
       font-size: 1.8rem; } }
 
-@media screen and (max-width: 590px) {
-  .main-menu {
-    width: 4rem; }
-    .main-menu__menu {
-      top: 7rem;
-      height: 4rem; }
-      .main-menu__menu li {
-        font-size: 1rem; }
-  .container {
-    margin-left: 4rem; }
-    .container .content__title {
-      font-size: 2rem; }
-    .container .content--first .second-menu ul li {
-      font-size: 1rem; }
-    .container .content--second .summary {
-      font-size: 1rem; } }
-
 .modal {
   position: fixed;
   z-index: 1000;
@@ -491,6 +480,23 @@ a {
       color: #D58936; }
     .modal__content.show {
       display: flex; }
+
+@media screen and (max-width: 590px) {
+  .main-menu {
+    width: 4rem; }
+    .main-menu__menu {
+      top: 7rem;
+      height: 4rem; }
+      .main-menu__menu li {
+        font-size: 1rem; }
+  .container {
+    margin-left: 4rem; }
+    .container .content__title {
+      font-size: 2rem; }
+    .container .content--first .second-menu ul li {
+      font-size: 1rem; }
+    .container .content--second .summary {
+      font-size: 1rem; } }
 
 @keyframes spin {
   from {

@@ -123,3 +123,19 @@
     }
   }
 }
+
+@media screen and (max-width: 590px) {
+  .page {
+    .project-identification{
+      &__info {
+        h1 {
+          font-size: 3rem;
+
+          span {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
