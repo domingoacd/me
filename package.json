@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon app.js",
-    "second": "node-sass ./second/sass/index.scss ./second/css/style.css --watch --source-map=true",
-    "sass": "node-sass ./src/sass/styles.scss ./public/css/styles.css --watch --source-map=true"
+    "sass": "node-sass ./second/sass/index.scss ./second/css/style.css --watch --source-map=true"
   },
   "repository": {
     "type": "git",
