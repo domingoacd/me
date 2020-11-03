@@ -23,6 +23,9 @@ a {
   width: 8rem;
   min-height: 100vh;
   height: 100%;
+  height: -moz-available;
+  height: -webkit-fill-available;
+  height: fill-available;
   display: flex;
   flex-direction: column;
   align-items: center;
