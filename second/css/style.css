@@ -381,6 +381,7 @@ a {
         .container .content--fourth .contact-form label textarea {
           height: 10rem; }
       .container .content--fourth .contact-form button[type=submit] {
+        position: relative;
         width: 10rem;
         height: 2.5rem;
         display: flex;
@@ -392,12 +393,40 @@ a {
         border: none;
         cursor: pointer;
         transition: transform 0.5s;
+        overflow: hidden;
         color: #fff;
         background-color: #D58936; }
         .container .content--fourth .contact-form button[type=submit]:focus {
           outline: none; }
         .container .content--fourth .contact-form button[type=submit]:hover {
           transform: scale(1.05); }
+        .container .content--fourth .contact-form button[type=submit]:disabled {
+          cursor: default; }
+          .container .content--fourth .contact-form button[type=submit]:disabled .spinner-container {
+            display: flex; }
+          .container .content--fourth .contact-form button[type=submit]:disabled:hover {
+            transform: unset; }
+        .container .content--fourth .contact-form button[type=submit] .spinner-container {
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 10;
+          width: 100%;
+          height: 100%;
+          display: none;
+          justify-content: center;
+          align-items: center;
+          background-color: #D58936; }
+          .container .content--fourth .contact-form button[type=submit] .spinner-container .spinner {
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            border: 2px solid transparent;
+            border-top-color: #fff;
+            animation-name: spin;
+            animation-duration: 500ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear; }
     .container .content__title {
       font-size: 3rem;
       font-weight: 300;
@@ -429,5 +458,36 @@ a {
       font-size: 1rem; }
     .container .content--second .summary {
       font-size: 1.2rem; } }
+
+.modal {
+  position: fixed;
+  z-index: 1000;
+  top: -100%;
+  right: 2%;
+  width: 15rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 10px;
+  transition: top 0.5s;
+  background-color: #F2F3AE;
+  box-shadow: 0px 0px 5px rgba(242, 243, 174, 0.3); }
+  .modal.display {
+    top: 2%; }
+  .modal__content {
+    color: #001011;
+    display: none; }
+    .modal__content.error {
+      color: #D58936; }
+    .modal__content.show {
+      display: flex; }
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
 
 /*# sourceMappingURL=style.css.map */

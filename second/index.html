@@ -36,6 +36,14 @@
     </ul>
   </nav>
   <div class="container">
+    <div class="modal modal--form j-modal">
+      <div class="modal__content success">
+        Thanks for your message! I will contact you back soon.
+      </div>
+      <div class="modal__content error">
+        Oops! Your message could not be sent.
+      </div>
+    </div>
     <section class="content content--first j-content" id="home">
       <div class="cover">
         <img src="./assets/foto.png" alt="" class="cover__pic">
@@ -60,10 +68,24 @@
       </h2>
 
       <div class="summary">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam interdum nulla vehicula, euismod ligula ut, tincidunt
-        ipsum. Nam tempus sapien non tellus fringilla dictum nec ut enim. Quisque sed nisl neque. Nam at nulla mi. Mauris eget
-        arcu in justo egestas pretium vitae in metus. Sed posuere massa eu nulla ultricies varius. In cursus tortor lorem, sit
-        amet fringilla leo fermentum ac.
+        Frontend web developer aiming to be full stack. With experience creating interactive elements for e-learning platforms and developing cms and online courses interfaces. <br>
+
+        Some technologies that I use are:
+
+        <ul>
+          <li>
+            React js
+          </li>
+          <li>
+            Css/ Sass
+          </li>
+          <li>
+            Javascript
+          </li>
+        </ul>
+        
+        And some others that I've learned throughout the projects I have been working on.
+
       </div>
     </section>
 
@@ -83,7 +105,7 @@
 
           <div class="project__hover-content">
             <p class="hover-text">
-              Esse culpa do deserunt laborum consequat elit ad do et eu nulla cillum.
+              Find all the pokemons info you need.
             </p>
             <a href="./react-pokedex.html" class="btn">More details</a>
           </div>
@@ -96,7 +118,7 @@
           </div>
           <div class="project__hover-content">
             <p class="hover-text">
-              Esse culpa do deserunt laborum consequat elit ad do et eu nulla cillum.
+              Mockup of a cars website.  
             </p>
             <a href="./charger.html" class="btn">More details</a>
           </div>
@@ -109,7 +131,7 @@
           </div>
           <div class="project__hover-content">
             <p class="hover-text">
-              Esse culpa do deserunt laborum consequat elit ad do et eu nulla cillum.
+              Business management e-learning platform.
             </p>
             <a href="./formacion-smart.html" class="btn">More details</a>
           </div>
@@ -119,7 +141,7 @@
           <img src="./assets/academia-logo.png" alt="">
           <div class="project__hover-content">
             <p class="hover-text">
-              Esse culpa do deserunt laborum consequat elit ad do et eu nulla cillum.
+              Ecommerce for selling online courses.
             </p>
             <a href="./academia.html" class="btn">More details</a>
           </div>
@@ -129,24 +151,33 @@
 
     <section class="content content--fourth j-content"  id="contact">
       <h2 class="content__title">Want to tell me something?</h2>
-      <form action="" class="contact-form">
-        <label for="" class="contact-form__name">
+      <form action="https://docs.google.com/forms/d/e/1FAIpQLScL7x7IDeC5WilG5Wewhd9zDr3ZJ1WH521ZA0ZyCpMq-AzXyQ/formResponse?"
+        class="contact-form">
+        <label for="entry.1793054211" class="contact-form__name">
           Name:
-          <input type="text" name="name" id="name" required aria-required="true">
+          <input type="text" name="entry.1793054211" id="entry.1793054211" required aria-required="true">
         </label>
-        <label for="" class="contact-form__email">
+        <label for="entry.1002230681" class="contact-form__email">
           Email:
-          <input type="email" name="email" id="email" required aria-required="true">
+          <input type="email" name="entry.1002230681" id="entry.1002230681" required aria-required="true">
         </label>
-        <label for="" class="contact-form__message">
+        <label for="entry.1233878156" class="contact-form__message">
           What can I help you with?
-          <textarea name="message" id="message" cols="30" rows="10" required aria-required="true"></textarea>
+          <textarea name="entry.1233878156" id="entry.1233878156" cols="30" rows="10" required
+            aria-required="true"></textarea>
         </label>
 
-        <button type="submit">Submit</button>
+        <button type="submit">
+          Submit 
+          <span class="spinner-container">
+            <span class="spinner"></span>
+          </span>
+        </button>
       </form>
+      
     </section>
   </div>
+  
   <script src="./js/app.js"></script>
 </body>
 </html>
